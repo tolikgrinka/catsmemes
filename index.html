@@ -7,19 +7,11 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script src="https://www.google.com/recaptcha/api.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
-    <script type="text/javascript">
-      var onloadCallback = function () {
-        grecaptcha.render("html_element", {
-          sitekey: "6Lf9ydAoAAAAAPO130WapcOROozwqfi4QkYDwHyM",
-        });
-      };
-    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
   <body>
@@ -50,20 +42,11 @@
       <div id="meme-modal-inner"></div>
     </div>
 
-    <form>
-      <label for="fname">First name:</label><br />
-      <input type="text" id="fname" name="fname" /><br />
-      <label for="lname">Last name:</label><br />
-      <input type="text" id="lname" name="lname" />
-      <button
-        class="g-recaptcha"
-        id="demo-form"
-        data-sitekey="6Lf9ydAoAAAAAPO130WapcOROozwqfi4QkYDwHyM"
-        data-callback="onSubmit"
-        data-action="submit"
-      >
-        Submit
-      </button>
+    <form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="6Lf9ydAoAAAAAPO130WapcOROozwqfi4QkYDwHyM"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
     </form>
 
     <script src="index.js" type="module"></script>
